@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Keyword Highlighter</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --muted: #57606a;
+    --accent: #ffb300;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
+      "Yu Gothic", sans-serif;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  header.hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header.hero h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  header.hero p {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  section h2 {
+    font-size: 17px;
+    margin: 0 0 12px;
+  }
+  section p {
+    margin: 0 0 10px;
+    font-size: 14px;
+  }
+  ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  .plans {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .plan {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .plan.pro {
+    border-color: var(--accent);
+    background: #fffaf0;
+  }
+  .plan h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+  }
+  .plan .price {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 10px;
+  }
+  .plan ul {
+    font-size: 13px;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 40px;
+  }
+  a { color: #0969da; }
+  code {
+    background: #eef1f4;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  @media (max-width: 480px) {
+    .plans { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Keyword Highlighter</h1>
+      <p>Webページ内のキーワードを自動でハイライトし、メモを表示するChrome拡張機能</p>
+    </header>
+
+    <section>
+      <h2>製品について</h2>
+      <p>
+        Keyword Highlighter は、Webページ内の指定したキーワードを自動でハイライトし、メモを添えて表示できるChrome拡張機能です。
+        エラーコードや専門用語のチェック、調査時のキーワード管理など、日々のブラウジングを効率化します。
+      </p>
+      <ul>
+        <li>キーワードごとに背景色・文字色を自由に設定</li>
+        <li>ハイライト部分にマウスを乗せるとメモを表示</li>
+        <li>キーワードの個別ON/OFF、拡張機能全体のON/OFF切り替え</li>
+        <li>動的に内容が変わるページにも自動で追従</li>
+        <li>複数プロファイルで用途別にキーワードセットを切り替え（Pro）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>料金プラン</h2>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <div class="price">¥0</div>
+          <ul>
+            <li>プロファイル1つ</li>
+            <li>キーワード最大10件</li>
+            <li>色・メモ・ON/OFF等の基本機能</li>
+          </ul>
+        </div>
+        <div class="plan pro">
+          <h3>Pro（買い切り）</h3>
+          <div class="price">¥1,500</div>
+          <ul>
+            <li>プロファイル数・キーワード数無制限</li>
+            <li>カスタムカラー、正規表現検索</li>
+            <li>背景色プリセットのカスタマイズ</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:14px;">
+        Pro版の購入は、拡張機能内の「Proにアップグレード」から、決済代行サービス
+        <a href="https://extensionpay.com" target="_blank" rel="noopener">ExtensionPay</a>
+        を経由してStripeの決済ページで行われます。
+      </p>
+    </section>
+
+    <section>
+      <h2>入手方法</h2>
+      <p>Chrome ウェブストアにて公開予定です（公開後、このページにリンクを追加します）。</p>
+    </section>
+
+    <section>
+      <h2>プライバシーポリシー</h2>
+      <p><small>最終更新日: 2026年8月18日</small></p>
+      <p>katsuan（以下「当方」）は、Chrome拡張機能「Keyword Highlighter」（以下「本拡張機能」）における利用者情報の取り扱いについて、以下のとおりプライバシーポリシーを定めます。</p>
+
+      <p><strong>取得する情報</strong><br />
+      本拡張機能は、ハイライト設定・キーワード・メモ・プロファイル情報を、利用者のブラウザ内（<code>chrome.storage.local</code>）にのみ保存します。これらの情報が当方または第三者のサーバーに送信されることはありません。</p>
+
+      <p><strong>決済に関する情報</strong><br />
+      Pro版の購入には、決済代行サービス <a href="https://extensionpay.com" target="_blank" rel="noopener">ExtensionPay</a> を利用しています。決済処理の過程で、利用者のメールアドレスおよび決済情報がExtensionPayおよびStripe, Inc.に送信されます。これらの情報の取り扱いについては、各社のプライバシーポリシーをご確認ください（<a href="https://stripe.com/jp/privacy" target="_blank" rel="noopener">Stripeのプライバシーポリシー</a>）。当方はStripeの決済情報（カード番号等）に一切アクセスできません。</p>
+
+      <p><strong>閲覧ページの内容へのアクセスについて</strong><br />
+      本拡張機能はキーワードハイライトを表示するため、閲覧中のWebページのテキストを読み取りますが、その内容を外部に送信・記録することはありません。</p>
+
+      <p><strong>お問い合わせ</strong><br />
+      本ポリシーに関するお問い合わせは、<a href="mailto:amisutak@gmail.com">amisutak@gmail.com</a> までご連絡ください。</p>
+    </section>
+
+    <footer>
+      運営者: katsuan ／ お問い合わせ: <a href="mailto:amisutak@gmail.com">amisutak@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
